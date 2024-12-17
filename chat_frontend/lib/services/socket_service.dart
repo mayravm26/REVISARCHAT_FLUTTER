@@ -42,7 +42,7 @@ class SocketService {
   // Método para conectar al servidor WebSocket y con token JWT
   void connect(String token) {
     _socket = IO.io(
-      'http://localhost:5000', // URL del servidor Socket.IO
+      'http://10.0.0.2.2:5000', // URL del servidor Socket.IO
       IO.OptionBuilder()
           .setTransports(['websocket']) // Transmisión mediante WebSocket
           .setAuth({'token': token}) //Enviar el token JWT en el 3handshake
